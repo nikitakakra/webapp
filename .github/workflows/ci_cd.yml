@@ -1,8 +1,8 @@
 name: CI/CD to Azure Container Registry
 
 env:
-  AZURE_CONTAINER_REGISTRY: yourcontainerregistry.azurecr.io
-  AZURE_CONTAINER_REGISTRY_USERNAME: yourcontainerregistry
+  AZURE_CONTAINER_REGISTRY:  azureincubationacr.azurecr.io
+  AZURE_CONTAINER_REGISTRY_USERNAME:  azureincubationacr
   IMAGE_NAME: webapp
 
 on:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out source code
+    - name: Check out from source code
       uses: actions/checkout@v3
 
     - name: Set up Java 17
